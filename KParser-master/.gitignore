@@ -1,0 +1,11 @@
+*.iml
+.gradle
+classes
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/keys.properties
+KParser/src/jvmMain/
