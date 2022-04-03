@@ -15,10 +15,9 @@ class ExpressionParser {
         logEnabled = status
     }
 
-    fun evaluate(expression: String, precision: Int = 3): Double {
+    fun evaluate(expression: String): Double {
         val uExpression = convertToUExpression(expression)
-        val res = evaluateExpression(uExpression)
-        return roundToPrecision(res, precision)
+        return evaluateExpression(uExpression)
     }
 
     private fun convertToUExpression(expression: String): String {
@@ -41,15 +40,6 @@ class ExpressionParser {
             }
         }
         return sb.toString()
-    }
-
-    private fun roundToPrecision(value: Double, precision: Int = 3): Double {
-        val corrector = 10.0.pow(precision).toInt()
-        var result = round(value * corrector) / corrector
-        if (result == -0.0) {
-            result = 0.0
-        }
-        return result
     }
 
 
