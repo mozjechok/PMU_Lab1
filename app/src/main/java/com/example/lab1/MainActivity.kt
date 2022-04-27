@@ -110,6 +110,26 @@ class MainActivity : AppCompatActivity() {
             updateText(")")
         }
 
+        val sinBtn = findViewById<Button>(R.id.SinBtn)
+        sinBtn.setOnClickListener {
+            updateText("sin(")
+        }
+
+        val cosBtn = findViewById<Button>(R.id.CosBtn)
+        cosBtn.setOnClickListener {
+            updateText("cos(")
+        }
+
+        val expBtn = findViewById<Button>(R.id.ExpBtn)
+        expBtn.setOnClickListener {
+            updateText("exp(")
+        }
+
+        val sqrtBtn = findViewById<Button>(R.id.SqrtBtn)
+        sqrtBtn.setOnClickListener {
+            updateText("sqrt(")
+        }
+
         val acBtn = findViewById<Button>(R.id.ACBtn)
         acBtn.setOnClickListener {
             textView.setText("")
@@ -129,7 +149,8 @@ class MainActivity : AppCompatActivity() {
         equalsBtn.setOnClickListener {
             try {
                 val parser = ExpressionParser()
-                textView.setText(parser.evaluate(textView.text.toString()).toString())
+                val result = parser.evaluate(textView.text.toString())
+                textView.setText(String.format("%.3f",result))
                 textView.setSelection(textView.text.length)
                 errorTextView.text = ""
             }

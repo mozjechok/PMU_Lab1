@@ -22,7 +22,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textColor="#FF0000"
+            android:textSize="34sp" />
+
 
         <EditText
             android:id="@+id/ResultText"
@@ -41,6 +43,47 @@
             android:layout_height="wrap_content"
             android:layout_weight="10"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/SinBtn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Sin" />
+
+                <Button
+                    android:id="@+id/CosBtn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Cos" />
+
+                <Button
+                    android:id="@+id/ExpBtn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="e" />
+
+                <Button
+                    android:id="@+id/SqrtBtn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Sqrt" />
+
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
